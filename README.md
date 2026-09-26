@@ -1,106 +1,94 @@
-# TrustRent 🛡️
-> **Tri-Party Rental Escrow, Landlord Dispute Intelligence ("RentKarma"), & Mutual Consent Settlement Platform**
+# TrustRent
+
+Rental escrow, landlord dispute records, and mutual-consent deposit settlements.
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![PRD Version](https://img.shields.io/badge/PRD-v1.0.0-green.svg)](PRD_AND_SYSTEM_ARCHITECTURE.md)
-[![Status](https://img.shields.io/badge/Status-Specification%20%26%20Design-orange.svg)](#)
 
 ---
 
-## 📌 The Problem: The Security Deposit Hostage Trap
+## The problem
 
-In major urban rental markets in India (Bengaluru, Mumbai, Gurgaon, Pune, Hyderabad), security deposits historically range from **₹1,50,000 to ₹4,00,000+** (6 to 10 months of rent).
+In cities like Bengaluru, Mumbai, and Gurgaon, landlords routinely take 6 to 10 months of rent upfront as a security deposit (often ₹1.5L to ₹4L). 
 
-Because landlords hold 100% of this capital in personal savings accounts, a severe power asymmetry exists:
-- **Bogus Painting & Repair Deductions**: Landlords routinely deduct **₹50,000 to ₹1,50,000** for routine wear-and-tear or fabricated damages to subsidize property renovation for subsequent tenants.
-- **The "Attrition Game"**: Landlords delay deposit refunds for 60–90 days with excuses ("out of town", "contractor estimate pending"), knowing that the tenant who has relocated to a new flat cannot afford a multi-year civil court battle.
-- **Police & Legal Friction**: Local police routinely classify deposit withholding as a "civil matter," leaving tenants defenseless without formal legal notices or Consumer Court filings.
+When a tenant decides to move out, the landlord holds all the leverage. Deductions of ₹40,000 to ₹1,00,000 for full repainting, deep cleaning, or ordinary wear and tear are standard practice. Many landlords delay refunds for months because they know outgoing tenants have new jobs, new leases, and zero time to spend in court over ₹60,000. Local police stations usually turn tenants away, calling it a civil matter.
 
 ---
 
-## 🚀 The TrustRent Solution
+## How TrustRent works
 
-TrustRent restores trust and financial fairness to urban renting via four core pillars:
+TrustRent handles deposits through neutral escrow accounts and gives tenants public data on landlords who withhold money.
 
 ```
                                   TRUSTRENT PLATFORM
   ┌───────────────────────────┐                        ┌───────────────────────────┐
   │   RentKarma Registry      │                        │       EscrowVault         │
-  │ • Landlord Phone/GPS Search│                        │ • RBI Trustee Bank Model  │
-  │ • Redacted Legal Proof    │                        │ • ₹3L Deposit Locked      │
-  │ • "Verified Dispute" Badge│                        │ • Undisputed Fast Payout  │
+  │ • Search by phone/address │                        │ • Regulated trustee bank  │
+  │ • Redacted proof uploads  │                        │ • Deposit stays locked    │
+  │ • Verified dispute tag    │                        │ • Fast partial refunds    │
   └─────────────┬─────────────┘                        └─────────────┬─────────────┘
                 │                                                    │
                 └───────────────────────┬────────────────────────────┘
                                         ▼
                    ┌───────────────────────────────────────────┐
-                   │    Move-Out Settlement & Landlord Engine  │
-                   │ • Simple Mutual Consent / Split Protocol  │
-                   │ • Legitimate Damage Deduction from Escrow │
-                   │ • Guaranteed 1st-of-Month Rent to Landlord│
-                   │ • 0% Brokerage + Pre-Vetted Tech Tenants  │
+                   │        Move-out settlement engine         │
+                   │ • Both parties sign off on deductions     │
+                   │ • Legitimate damage paid from deposit     │
+                   │ • Undisputed balance returned same day    │
+                   │ • Landlord gets guaranteed rent on 1st    │
                    └───────────────────────────────────────────┘
 ```
 
-1. **RentKarma (Landlord Dispute & Reputation Registry)**:
-   - Search by landlord mobile number hash, name, or building/society.
-   - Crowdsourced reports with an option to upload redacted proof (rental agreements, bank debit proof, legal notices) to earn a **"Verified Dispute"** badge.
-2. **EscrowVault (Tri-Party Digital Escrow)**:
-   - Security deposits are locked in an RBI-compliant trustee bank sub-account.
-   - Landlords cannot unilaterally siphon funds.
-3. **Move-Out Mutual Consent Settlement**:
-   - **Fair Damage Deductions**: If something is genuinely damaged, the landlord submits itemized photo proof; upon tenant agreement, the exact amount is deducted from the deposit and paid to the landlord.
-   - **No Full-Deposit Hostage**: If a landlord claims ₹15,000 damage out of a ₹3,00,000 deposit, the undisputed ₹2,85,000 is **released to the tenant immediately**. Only the disputed ₹15,000 remains frozen pending mediation.
-4. **Landlord Adoption Flywheel**:
-   - Landlords get **Guaranteed Rent on the 1st of every month** (advanced before tenant autopay clears).
-   - Access to pre-vetted corporate/tech tenants (Aadhaar KYC + work email + CIBIL > 720).
-   - **0% Brokerage fees**.
+### 1. RentKarma: public dispute lookup
+Tenants can check a landlord's record by phone number hash or building address before signing a lease. Any tenant can file a review, but reports backed by redacted proof (lease agreements, bank debit statements, or legal notices) get a verified tag. Landlords can claim their profile to post proof of refund or file rebuttals.
+
+### 2. EscrowVault: third-party deposit holding
+Instead of sending ₹3,00,000 to a landlord's personal savings account, the deposit sits in an RBI-compliant trustee bank sub-account. The landlord cannot unilaterally touch the principal during or after the tenancy.
+
+### 3. Mutual-consent move-out settlements
+If an appliance or fixture breaks, the landlord submits photos and an invoice. If both sides agree on the cost, that exact amount goes to the landlord and the rest returns to the tenant within hours. 
+
+If there is a disagreement over ₹15,000 of damage, the platform does not freeze the full ₹3,00,000. It returns the undisputed ₹2,85,000 to the tenant immediately. Only the disputed ₹15,000 remains locked while an independent mediator reviews the move-in photos.
+
+### 4. Landlord incentives
+Landlords usually resist escrow because they like holding cash. To get them to adopt TrustRent:
+- TrustRent guarantees rent payment on the 1st of every month, even if tenant bank transfers are delayed.
+- Landlords get pre-screened tenants with verified work profiles, Aadhaar KYC, and CIBIL scores above 720.
+- Zero brokerage fees.
 
 ---
 
-## 📖 Detailed Documentation
-
-- **Full Product Requirements Document (PRD)**: [PRD_AND_SYSTEM_ARCHITECTURE.md](PRD_AND_SYSTEM_ARCHITECTURE.md)
-  - Detailed User Personas & Journey Maps
-  - Banking & Regulatory Structure (RBI Intermediary / Escrow Guidelines & SEBI-registered trustees)
-  - Complete PostgreSQL / Prisma ORM Database Schema
-  - RESTful API Specifications
-  - Unit Economics & Monetization Strategy
-  - Phased Implementation Roadmap
-
----
-
-## 🛠️ System Architecture
+## Architecture overview
 
 ```mermaid
 graph TB
-    subgraph Client_Applications [Client Applications]
-        WebPortal[Next.js 15 Web App / PWA]
-        MobileApp[React Native Mobile App]
+    subgraph Client_Applications [Client apps]
+        WebPortal[Next.js 15 web app]
+        MobileApp[React Native mobile app]
     end
 
-    subgraph API_Gateway [API Gateway & Security Layer]
-        Gateway[Kong / Cloudflare API Gateway]
-        AuthService[Auth0 / Supabase Auth - Phone OTP + Aadhaar]
+    subgraph API_Gateway [API gateway and auth]
+        Gateway[Cloudflare / API gateway]
+        AuthService[Phone OTP and Aadhaar auth]
     end
 
-    subgraph Core_Services [Microservices / Backend Engines]
-        DisputeService[Dispute & Karma Service]
-        EscrowEngine[Escrow & Settlement Engine]
-        RentGuarantor[Rent Guarantee & Payout Scheduler]
-        MediaPipeline[Document OCR & PII Redactor]
+    subgraph Core_Services [Backend services]
+        DisputeService[Dispute and karma service]
+        EscrowEngine[Escrow and settlement engine]
+        RentGuarantor[Rent guarantee payout scheduler]
+        MediaPipeline[OCR and document PII redactor]
     end
 
-    subgraph Data_Stores [Datastores & Storage]
-        PostgreSQL[(PostgreSQL 16 - Core Relational DB)]
-        RedisCache[(Redis - Caching & Rate Limiting)]
-        S3Bucket[(AWS S3 / GCP Storage - Encrypted Vault)]
+    subgraph Data_Stores [Datastores]
+        PostgreSQL[(PostgreSQL 16)]
+        RedisCache[(Redis cache and rate limiter)]
+        S3Bucket[(Encrypted object storage)]
     end
 
-    subgraph External_Integrations [Banking & Regulatory Partners]
-        TrusteeBank[Partner Bank API - Escrow Virtual Accounts]
-        NeSL[NeSL / Digio - Aadhaar e-Sign Agreement]
-        PaymentGateway[Razorpay / Cashfree - e-NACH / UPI Autopay]
+    subgraph External_Integrations [External partners]
+        TrusteeBank[Partner bank escrow APIs]
+        NeSL[Aadhaar e-Sign service]
+        PaymentGateway[UPI autopay and e-NACH]
     end
 
     Client_Applications --> Gateway
@@ -115,6 +103,16 @@ graph TB
 
 ---
 
-## 📜 License
+## Documentation
+
+Read the full technical specification in [PRD_AND_SYSTEM_ARCHITECTURE.md](PRD_AND_SYSTEM_ARCHITECTURE.md):
+- Trustee banking and legal structure under Indian law
+- PostgreSQL and Prisma schema
+- Complete REST API routes and payload contracts
+- Unit economics and rollout roadmap
+
+---
+
+## License
 
 MIT License. See [LICENSE](LICENSE) for details.
